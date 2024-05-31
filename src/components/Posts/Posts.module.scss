@@ -1,0 +1,49 @@
+$cardHeightMin: 210px;
+
+.cardContainer {
+  min-width: 320px;
+  max-width: 75%;
+  display: grid;
+  width: 100%;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(auto-fill, minmax($cardHeightMin, 0fr)); // Три колонки
+  
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  @media (max-width: 350px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  min-width: 177px;
+  height: $cardHeightMin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  img {
+    width: 144px;
+    height: calc(#{$cardHeightMin} - 48px);
+  }
+
+  p {
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: left;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px 18px;
+    background-color: #fff;
+  }
+}

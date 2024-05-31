@@ -1,0 +1,30 @@
+.aside {
+    border: solid 1px #CFCFE4;
+    padding: 12px;
+    width: max-content;
+    height: max-content;
+    border-radius: 18px;
+    margin-right: 24px;
+    &>ul{
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+    }
+    overflow: hidden;
+}
+
+.categoryItem {
+    font-family: "Nunito";
+    font-weight: 800;
+    color: #39414B;
+    border-radius: 12px;
+    padding: 12px;
+    height: 42px;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    &.active {
+        background: #5FBF77;
+        color: #fff;
+    }
+}
